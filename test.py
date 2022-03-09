@@ -9,7 +9,6 @@ class test:
 lis = []
 lis.append(test())
 print(lis)
-# i dont want ot print that shit
 
 
 
