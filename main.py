@@ -2,6 +2,10 @@ from termcolor import colored as cl
 from random import randint as ri, choice
 from time import sleep as s
 
+# 'word' is a string.
+# 'idx' is a list containing two values (8a -> [8,1]) and usually refers to the index of the first letter in the word.
+# 'direc' is a character, h(orizontal) or v(ertical).
+
 class Board:
 
     def __init__(self):
@@ -73,6 +77,10 @@ class Board:
             self.board[6][i] = cl(char, "blue", attrs=["bold"])
             self.board[10][i] = cl(char, "blue", attrs=["bold"])
 
+    def canPlaceWord(self,word,idx,direc):
+        pass
+        # TODO: after finishing word class
+
     def placeWord(self,word,idx,direc):
         if direc == 'h':
             for i in word:
@@ -85,10 +93,15 @@ class Board:
 
     def isTileTaken(self,idx):
         if self.board[idx[0]][idx[1]] not in coloured and self.board[idx[0]][idx[1]] != char:
-            return False
-        return True
+            return True
+        return False
 
 
+class Word:
+    def __init__(self, word, idx, direc):
+        self.word = word
+        self.idx = idx
+        self.direc = direc
 
 
 
@@ -140,6 +153,7 @@ class Player:
 
     def canPlayIndex(self):
         pass
+        # TODO
 
 
 
@@ -418,7 +432,6 @@ print(board.isTileTaken([8,6]))
 print(board.isTileTaken([8,7]))
 print(board.isTileTaken([7,6]))
 print(board.isTileTaken([4,15]))
-
 
 # while True:
 #     p1.refillLetters()

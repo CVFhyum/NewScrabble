@@ -9,7 +9,6 @@ from time import sleep as s
 # A variable ending with 'List' is a list of elements made up of other variables.
 
 
-# TODO: work on taken slots on the board
 
 char = '□'
 coloured = [cl('★', 'red'), cl(char, 'red'), cl(char, 'magenta', attrs=['bold']), cl(char, 'cyan'), cl(char, 'blue')]
@@ -331,7 +330,7 @@ def command(inp):
     elif inp == "*rules":
         rules()
 
-# [PRINT] Checks if the word that was placed is touching any other letters. TODO: make it calc and find a way to disallow the word if it doesnt not make a word with it's touching letters
+# [PRINT] Checks if the word that was placed is touching any other letters.
 def adjacent():
     indexdirectionposition = []
     for i in range(len(playWord)):
