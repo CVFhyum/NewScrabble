@@ -73,7 +73,7 @@ class Board:
             self.board[6][i] = cl(char, "blue", attrs=["bold"])
             self.board[10][i] = cl(char, "blue", attrs=["bold"])
 
-    def PlaceWord(self,word,idx,direc):
+    def placeWord(self,word,idx,direc):
         if direc == 'h':
             for i in word:
                 self.board[idx[0]][idx[1]] = cl(i.upper(),'yellow',attrs=['bold'])
@@ -82,6 +82,12 @@ class Board:
             for i in word:
                 self.board[idx[0]][idx[1]] = cl(i.upper(),'yellow',attrs=['bold'])
                 idx[0] += 1
+
+    def isTileTaken(self,idx):
+        if self.board[idx[0]][idx[1]] not in coloured and self.board[idx[0]][idx[1]] != char:
+            return False
+        return True
+
 
 
 
@@ -404,9 +410,15 @@ p1 = Player("Yuval", "1", "red")
 board = Board()
 print(board)
 
-board.PlaceWord("Hello",[8,6],'h')
-board.PlaceWord("love",[4,14],'v')
+board.placeWord("Hello",[8,6],'h')
+board.placeWord("love",[4,14],'v')
 print(board)
+
+print(board.isTileTaken([8,6]))
+print(board.isTileTaken([8,7]))
+print(board.isTileTaken([7,6]))
+print(board.isTileTaken([4,15]))
+
 
 # while True:
 #     p1.refillLetters()
