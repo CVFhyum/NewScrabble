@@ -404,6 +404,7 @@ p1 = Player("Yuval", "1", "red")
 board = Board()
 print(board)
 print("hi")
+print("")
 
 board.PlaceWord("Hello",[8,6],'h')
 board.PlaceWord("love",[4,14],'v')
