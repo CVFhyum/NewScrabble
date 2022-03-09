@@ -408,7 +408,8 @@ board.PlaceWord("Hello",[8,6],'h')
 board.PlaceWord("love",[4,14],'v')
 print(board)
 
-print("Hello")
+
+
 # while True:
 #     p1.refillLetters()
 #     print(p1)
