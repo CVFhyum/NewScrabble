@@ -28,6 +28,7 @@ class Board:
         Board.colourBoard(self)
         self.words = [] # List of words on the board, all being objects of class 'Word'.
 
+    # Returns board printed nicely
     def __str__(self):
         string = ""
         for i in range(len(self.board)):
@@ -36,6 +37,7 @@ class Board:
             string += "\n"
         return string
 
+    # Colours board, is used once in __init__
     def colourBoard(self):
         # Middle Tile
         self.board[8][8] = cl("★", "red")
@@ -78,10 +80,12 @@ class Board:
             self.board[6][i] = cl(char, "blue", attrs=["bold"])
             self.board[10][i] = cl(char, "blue", attrs=["bold"])
 
+    # Checks if a word can be placed on the board, considering board boundaries and words around it.
     def canPlaceWord(self,word,idx,direc):
         pass
         # TODO: after finishing word class
 
+    # Places a word on the board
     def placeWord(self,word,idx,direc):
         self.words.append(Word(word,idx,direc))
         if direc == 'h':
@@ -93,7 +97,7 @@ class Board:
                 self.board[idx[0]][idx[1]] = cl(i.upper(),'yellow',attrs=['bold'])
                 idx[0] += 1
 
-
+    # Checks if a tile is taken on the board
     def isTileTaken(self,idx):
         if self.board[idx[0]][idx[1]] not in coloured and self.board[idx[0]][idx[1]] != char:
             return True
@@ -130,10 +134,12 @@ class Player:
         self.curidx = ""
         self.curdirec = ""
 
+    # Returns a string with the player name and their colour
     def __str__(self):
-        return f"""{cl(f"Player {self.number} - {cl(self.name,attrs=['bold','underline'])}",'red')}\n""" \
+        return f"""{cl(f"Player {self.number} - {cl(self.name,attrs=['bold','underline'])}",self.colour)}\n""" \
                f"Your letters are: {', '.join([letterpointSub[x] for x in self.letters])}"
 
+    # Refills the player's letters back up to 7
     def refillLetters(self):
         for i in range(0, 7-len(self.letters)):
             s(0.01)
@@ -141,6 +147,9 @@ class Player:
             self.letters.append(ran)
             del letterFreq[self.letters.index(ran)]
 
+    # Checks if the player can play a word:
+        # LettersCheck -> Does the player have the required letters for this word?
+        # DictCheck -> Is the word valid in the dictionary?
     def canPlayWord(self):
         def LettersCheck():
             curwordL = [char for char in self.curword]
@@ -163,6 +172,7 @@ class Player:
 
         return LettersCheck() and DictCheck()
 
+    # Checks if the player can play the word at the index they specified
     def canPlayIndex(self):
         pass
         # TODO
@@ -385,18 +395,6 @@ def command(inp):
         key()
     elif inp == "*rules":
         rules()
-
-
-# [CALC] Checking a word against the dictionary
-def dict(word):
-    valid = False
-    with open('dict.txt','r') as f:
-        for i in f:
-            i = i.replace("\n",'')
-            if word == i:
-                return True
-        if not valid:
-            return False
 
 
 # [CALC] Checks the longest word that can be made with the letters in the given list
