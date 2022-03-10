@@ -26,6 +26,7 @@ class Board:
                      ["14",s196,s197,s198,s199,s200,s201,s202,s203,s204,s205,s206,s207,s208,s209,s210],
                      ["15",s211,s212,s213,s214,s215,s216,s217,s218,s219,s220,s221,s222,s223,s224,s225]]
         Board.colourBoard(self)
+        self.words = [] # List of words on the board, all being objects of class 'Word'.
 
     def __str__(self):
         string = ""
@@ -82,6 +83,7 @@ class Board:
         # TODO: after finishing word class
 
     def placeWord(self,word,idx,direc):
+        self.words.append(Word(word,idx,direc))
         if direc == 'h':
             for i in word:
                 self.board[idx[0]][idx[1]] = cl(i.upper(),'yellow',attrs=['bold'])
@@ -91,6 +93,7 @@ class Board:
                 self.board[idx[0]][idx[1]] = cl(i.upper(),'yellow',attrs=['bold'])
                 idx[0] += 1
 
+
     def isTileTaken(self,idx):
         if self.board[idx[0]][idx[1]] not in coloured and self.board[idx[0]][idx[1]] != char:
             return True
@@ -99,9 +102,18 @@ class Board:
 
 class Word:
     def __init__(self, word, idx, direc):
-        self.word = word
-        self.idx = idx
+        self.word = word.upper()
+        self.idx = []
         self.direc = direc
+        if direc == 'h':
+            for i in range(len(word)):
+                self.idx.append([idx[0],idx[1]+i])
+        if direc == 'v':
+            for i in range(len(word)):
+                self.idx.append([idx[0]+i,idx[1]])
+
+        wordsObj[self.word] = self
+
 
 
 
@@ -181,19 +193,11 @@ s1 = s2 = s3 = s4 = s5 = s6 = s7 = s8 = s9 = s10 = s11 = s12 = s13 = s14 = s15 =
     = s181 = s182 = s183 = s184 = s185 = s186 = s187 = s188 = s189 = s190 = s191 = s192 = s193 = s194 = s195 = s196 = s197 = s198 = s199 = s200 \
     = s201 = s202 = s203 = s204 = s205 = s206 = s207 = s208 = s209 = s210 = s211 = s212 = s213 = s214 = s215 = s216 = s217 = s218 = s219 = s220 \
     = s221 = s222 = s223 = s224 = s225 = char
-b1 = b2 = b3 = b4 = b5 = b6 = b7 = b8 = b9 = b10 = b11 = b12 = b13 = b14 = b15 = b16 = b17 = b18 = b19 = b20 \
-    = b21 = b22 = b23 = b24 = b25 = b26 = b27 = b28 = b29 = b30 = b31 = b32 = b33 = b34 = b35 = b36 = b37 = b38 = b39 = b40 \
-    = b41 = b42 = b43 = b44 = b45 = b46 = b47 = b48 = b49 = b50 = b51 = b52 = b53 = b54 = b55 = b56 = b57 = b58 = b59 = b60 \
-    = b61 = b62 = b63 = b64 = b65 = b66 = b67 = b68 = b69 = b70 = b71 = b72 = b73 = b74 = b75 = b76 = b77 = b78 = b79 = b80 \
-    = b81 = b82 = b83 = b84 = b85 = b86 = b87 = b88 = b89 = b90 = b91 = b92 = b93 = b94 = b95 = b96 = b97 = b98 = b99 = b100 \
-    = b101 = b102 = b103 = b104 = b105 = b106 = b107 = b108 = b109 = b110 = b111 = b112 = b113 = b114 = b115 = b116 = b117 = b118 = b119 = b120 \
-    = b121 = b122 = b123 = b124 = b125 = b126 = b127 = b128 = b129 = b130 = b131 = b132 = b133 = b134 = b135 = b136 = b137 = b138 = b139 = b140 \
-    = b141 = b142 = b143 = b144 = b145 = b146 = b147 = b148 = b149 = b150 = b151 = b152 = b153 = b154 = b155 = b156 = b157 = b158 = b159 = b160 \
-    = b161 = b162 = b163 = b164 = b165 = b166 = b167 = b168 = b169 = b170 = b171 = b172 = b173 = b174 = b175 = b176 = b177 = b178 = b179 = b180 \
-    = b181 = b182 = b183 = b184 = b185 = b186 = b187 = b188 = b189 = b190 = b191 = b192 = b193 = b194 = b195 = b196 = b197 = b198 = b199 = b200 \
-    = b201 = b202 = b203 = b204 = b205 = b206 = b207 = b208 = b209 = b210 = b211 = b212 = b213 = b214 = b215 = b216 = b217 = b218 = b219 = b220 \
-    = b221 = b222 = b223 = b224 = b225 = False
 
+# Conversion from 'Word' object value to the actual object
+wordsObj = {
+
+}
 
 # The frequency of each letter
 letterFreq = ['A','A','A','A','A','A','A','A',
@@ -415,6 +419,10 @@ def checkwords(list):
                             maxword = i
         return maxword
 
+def multPrint(*toprint):
+    for i in toprint:
+        print(i)
+
 # [CALC] Converts a number/letter index to number/number
 
 
@@ -425,13 +433,16 @@ board = Board()
 print(board)
 
 board.placeWord("Hello",[8,6],'h')
-board.placeWord("love",[4,14],'v')
-print(board)
+multPrint(board,
+          board.words,
+          board.words[0].idx,
+          wordsObj)
 
-print(board.isTileTaken([8,6]))
-print(board.isTileTaken([8,7]))
-print(board.isTileTaken([7,6]))
-print(board.isTileTaken([4,15]))
+board.placeWord("love",[4,14],'v')
+multPrint(board,
+          board.words,
+          board.words[1].idx,
+          wordsObj)
 
 # while True:
 #     p1.refillLetters()
