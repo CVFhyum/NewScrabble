@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="Added idxConverter&#10;Started autoHorV" />
+    <list default="true" id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="something" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +16,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="269cWR4SBx4hBqdOE6aHTRF66xH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -117,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647271616821</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added idxConverter&#10;Started autoHorV">
+      <created>1647272033238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647272033238</updated>
+    </task>
+    <task id="LOCAL-00006" summary="something">
+      <created>1647272178953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647272178953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +150,7 @@
     <MESSAGE value="added not hi" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Added idxConverter&#10;Started autoHorV" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added idxConverter&#10;Started autoHorV" />
+    <MESSAGE value="something" />
+    <option name="LAST_COMMIT_MESSAGE" value="something" />
   </component>
 </project>

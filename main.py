@@ -174,12 +174,7 @@ class Player:
             return False
 
 
-print("hi")
 
-
-
-
-print("hi")
 char = '□'
 coloured = [cl('★','red'),cl(char,'red'),cl(char,'magenta',attrs=['bold']),cl(char,'cyan'),cl(char,'blue')]
 commands = ["*help","*key","*rules"]
