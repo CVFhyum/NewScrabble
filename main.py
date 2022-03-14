@@ -26,7 +26,9 @@ class Board:
                      ["14",s196,s197,s198,s199,s200,s201,s202,s203,s204,s205,s206,s207,s208,s209,s210],
                      ["15",s211,s212,s213,s214,s215,s216,s217,s218,s219,s220,s221,s222,s223,s224,s225]]
         Board.colourBoard(self)
-        self.words = [] # List of words on the board, all being objects of class 'Word'.
+
+        # List of words on the board, all being objects of class 'Word'.
+        self.words = []
 
     # Returns board printed nicely
     def __str__(self):
@@ -80,11 +82,6 @@ class Board:
             self.board[6][i] = cl(char, "blue", attrs=["bold"])
             self.board[10][i] = cl(char, "blue", attrs=["bold"])
 
-    # Checks if a word can be placed on the board, considering board boundaries and words around it.
-    def canPlaceWord(self,word,idx,direc):
-        pass
-        # TODO: after finishing word class
-
     # Places a word on the board
     def placeWord(self,word,idx,direc):
         self.words.append(Word(word,idx,direc))
@@ -119,9 +116,6 @@ class Word:
         wordsObj[self.word] = self
 
 
-
-
-
 class Player:
 
     def __init__(self, name, number, colour):
@@ -131,13 +125,13 @@ class Player:
         self.letters = []
         self.points = 0
         self.curword = ""
-        self.curidx = ""
-        self.curdirec = ""
+        self.curidx = []
+        self.curdirec = ''
 
     # Returns a string with the player name and their colour
     def __str__(self):
         return f"""{cl(f"Player {self.number} - {cl(self.name,attrs=['bold','underline'])}",self.colour)}\n""" \
-               f"Your letters are: {', '.join([letterpointSub[x] for x in self.letters])}"
+               f"Your letters are: {', '.join([letterPointSub[x] for x in self.letters])}"
 
     # Refills the player's letters back up to 7
     def refillLetters(self):
@@ -172,11 +166,12 @@ class Player:
 
         return LettersCheck() and DictCheck()
 
-    # Checks if the player can play the word at the index they specified
-    def canPlayIndex(self):
-        pass
-        # TODO
-
+    # Automatically changes player's 'curdirec' if their word can only be played
+    def autoHorV(self):
+        if self.curidx[0] + len(self.curword) > 15:
+            return False
+        if self.curidx[1] + len(self.curword) > 15:
+            return False
 
 
 
@@ -268,7 +263,7 @@ letterPoint = {
 }
 
 # Conversion of regular letter to letter with it's point value in subscript.
-letterpointSub = {
+letterPointSub = {
     "A": "A₁",
     "B": "B₃",
     "C": "C₃",
@@ -362,8 +357,7 @@ def rules():
     s(2)
     print("The rarer a letter is, the more points it grants.")
     s(1.5)
-    print(
-        "Player 1, on the first turn, must play their word in a place where one letter of the word is on the middle star.")
+    print("Player 1, on the first turn, must play their word in a place where one letter of the word is on the middle star.")
     s(3)
     print("After this, all players must place their words so they connect with other words already on the board.")
     s(3)
@@ -397,8 +391,14 @@ def command(inp):
         rules()
 
 
+# [PRINT] Prints multiple things at one time
+def multPrint(*toprint):
+    for i in toprint:
+        print(i)
+
+
 # [CALC] Checks the longest word that can be made with the letters in the given list
-def checkwords(list):
+def checkWords(list):
     maxlen = 0
     maxword = ''
     with open("dict.txt","r") as f:
@@ -417,11 +417,14 @@ def checkwords(list):
                             maxword = i
         return maxword
 
-def multPrint(*toprint):
-    for i in toprint:
-        print(i)
 
 # [CALC] Converts a number/letter index to number/number
+def idxConverter(stridx):
+    idx = [None, None]
+    idx[1] = letToNum[stridx[-1].upper()]
+    stridx = stridx[0:-1]
+    idx[0] = int(stridx)
+    return idx
 
 
 
@@ -430,17 +433,21 @@ p1 = Player("Yuval", "1", "red")
 board = Board()
 print(board)
 
-board.placeWord("Hello",[8,6],'h')
-multPrint(board,
-          board.words,
-          board.words[0].idx,
-          wordsObj)
+print(idxConverter(input()))
 
-board.placeWord("love",[4,14],'v')
-multPrint(board,
-          board.words,
-          board.words[1].idx,
-          wordsObj)
+
+
+# board.placeWord("Hello",[6,14],'h')
+# multPrint(board,
+#           board.words,
+#           board.words[0].idx,
+#           wordsObj)
+#
+# board.placeWord("love",[4,14],'v')
+# multPrint(board,
+#           board.words,
+#           board.words[1].idx,
+#           wordsObj)
 
 # while True:
 #     p1.refillLetters()
