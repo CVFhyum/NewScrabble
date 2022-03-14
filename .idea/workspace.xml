@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="60b714f0-b84a-4e51-b82a-98fbe1133e2b" name="Changes" comment="da" />
+    <list default="true" id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="Added idxConverter&#10;Started autoHorV" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/master" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectId" id="269dQs9t0nQPmLs4Ei8ra8kByzF" />
+  <component name="ProjectId" id="269cWR4SBx4hBqdOE6aHTRF66xH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -80,97 +83,41 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="60b714f0-b84a-4e51-b82a-98fbe1133e2b" name="Changes" comment="" />
-      <created>1646839723116</created>
+      <changelist id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="" />
+      <created>1646839273438</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646839723116</updated>
+      <updated>1646839273438</updated>
     </task>
-    <task id="LOCAL-00001" summary="pog">
-      <created>1646839925914</created>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1646839448863</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1646839925914</updated>
+      <updated>1646839448863</updated>
     </task>
-    <task id="LOCAL-00002" summary="pog">
-      <created>1646840088629</created>
+    <task id="LOCAL-00002" summary="added not hi">
+      <created>1646841645303</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1646840088629</updated>
+      <updated>1646841645303</updated>
     </task>
-    <task id="LOCAL-00003" summary="pog">
-      <created>1646840576405</created>
+    <task id="LOCAL-00003" summary="Updated">
+      <created>1646841782054</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1646840576405</updated>
+      <updated>1646841782054</updated>
     </task>
-    <task id="LOCAL-00004" summary="x">
-      <created>1646841360749</created>
+    <task id="LOCAL-00004" summary="Added idxConverter&#10;Started autoHorV">
+      <created>1647271616821</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1646841360749</updated>
+      <updated>1647271616821</updated>
     </task>
-    <task id="LOCAL-00005" summary="x">
-      <created>1646841548071</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1646841548071</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added hi">
-      <created>1646841593036</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1646841593036</updated>
-    </task>
-    <task id="LOCAL-00007" summary="test">
-      <created>1646841714395</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1646841714395</updated>
-    </task>
-    <task id="LOCAL-00008" summary="isTileTaken">
-      <created>1646848934512</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1646848934512</updated>
-    </task>
-    <task id="LOCAL-00009" summary="isTileTaken">
-      <created>1646858542390</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1646858542390</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Word __init__&#10;multPrint&#10;wordsObj">
-      <created>1646927139755</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1646927139755</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Comments">
-      <created>1646946931006</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1646946931006</updated>
-    </task>
-    <task id="LOCAL-00012" summary="da">
-      <created>1647271988782</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1647271988782</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,15 +133,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pog" />
-    <MESSAGE value="x" />
-    <MESSAGE value="added hi" />
-    <MESSAGE value="test" />
-    <MESSAGE value="isTileTaken" />
-    <MESSAGE value="Word __init__&#10;multPrint&#10;wordsObj" />
-    <MESSAGE value="Comments" />
-    <MESSAGE value="da" />
-    <option name="LAST_COMMIT_MESSAGE" value="da" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="added not hi" />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Added idxConverter&#10;Started autoHorV" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added idxConverter&#10;Started autoHorV" />
   </component>
 </project>
