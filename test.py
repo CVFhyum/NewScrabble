@@ -3,17 +3,21 @@ from random import randint as ri, choice
 from time import sleep as s, perf_counter
 from string import ascii_lowercase as lc, ascii_uppercase as uc, printable
 
-def Move1Over(arr):
-    last = arr[-1]
-    temp = arr[0]
-    for i in range(len(arr)-1):
-        arr[i+1] = temp
-        temp = arr[i+2]
+curword = "HELLOLOL"
+letters = [x for x in "HELLO"]
 
-    return arr
+def LettersCheck():
+    curwordL = [char for char in curword]
+    letterscopy = letters.copy()
+    for i in [char for char in curword]:
+        if i in letterscopy:
+            curwordL.remove(i)
+            letterscopy.remove(i)
+        else:
+            return False
+    return True
 
-l = ['h','m','n','p']
-print(Move1Over(l))
+print(LettersCheck())
 
 
 
