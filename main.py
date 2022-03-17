@@ -483,7 +483,7 @@ print(board)
 #     print(p1.curword)
 #     print(p1.canPlayWord())
 
-
+print("hi")
 
 
 
