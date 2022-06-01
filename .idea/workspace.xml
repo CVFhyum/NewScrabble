@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="something" />
+    <list default="true" id="60b714f0-b84a-4e51-b82a-98fbe1133e2b" name="Changes" comment="daqas">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_03_2022_17_28_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_03_2022_17_28__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_03_2022_17_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_03_2022_17_35__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="269cWR4SBx4hBqdOE6aHTRF66xH" />
+  <component name="ProjectId" id="269dQs9t0nQPmLs4Ei8ra8kByzF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NewScrabble" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,17 +56,17 @@
       <method v="2" />
     </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="NewScrabble" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\cvfhy\PycharmProjects\NewScrabble\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -82,55 +85,97 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9f8a2c71-b439-4646-bda3-da10a5981905" name="Changes" comment="" />
-      <created>1646839273438</created>
+      <changelist id="60b714f0-b84a-4e51-b82a-98fbe1133e2b" name="Changes" comment="" />
+      <created>1646839723116</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646839273438</updated>
+      <updated>1646839723116</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
-      <created>1646839448863</created>
+    <task id="LOCAL-00001" summary="pog">
+      <created>1646839925914</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1646839448863</updated>
+      <updated>1646839925914</updated>
     </task>
-    <task id="LOCAL-00002" summary="added not hi">
-      <created>1646841645303</created>
+    <task id="LOCAL-00002" summary="pog">
+      <created>1646840088629</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1646841645303</updated>
+      <updated>1646840088629</updated>
     </task>
-    <task id="LOCAL-00003" summary="Updated">
-      <created>1646841782054</created>
+    <task id="LOCAL-00003" summary="pog">
+      <created>1646840576405</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1646841782054</updated>
+      <updated>1646840576405</updated>
     </task>
-    <task id="LOCAL-00004" summary="Added idxConverter&#10;Started autoHorV">
-      <created>1647271616821</created>
+    <task id="LOCAL-00004" summary="x">
+      <created>1646841360749</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1647271616821</updated>
+      <updated>1646841360749</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added idxConverter&#10;Started autoHorV">
-      <created>1647272033238</created>
+    <task id="LOCAL-00005" summary="x">
+      <created>1646841548071</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1647272033238</updated>
+      <updated>1646841548071</updated>
     </task>
-    <task id="LOCAL-00006" summary="something">
-      <created>1647272178953</created>
+    <task id="LOCAL-00006" summary="added hi">
+      <created>1646841593036</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1647272178953</updated>
+      <updated>1646841593036</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test">
+      <created>1646841714395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646841714395</updated>
+    </task>
+    <task id="LOCAL-00008" summary="isTileTaken">
+      <created>1646848934512</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646848934512</updated>
+    </task>
+    <task id="LOCAL-00009" summary="isTileTaken">
+      <created>1646858542390</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1646858542390</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Word __init__&#10;multPrint&#10;wordsObj">
+      <created>1646927139755</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1646927139755</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Comments">
+      <created>1646946931006</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646946931006</updated>
+    </task>
+    <task id="LOCAL-00012" summary="da">
+      <created>1647271988782</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1647271988782</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,11 +191,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
-    <MESSAGE value="added not hi" />
-    <MESSAGE value="Updated" />
-    <MESSAGE value="Added idxConverter&#10;Started autoHorV" />
-    <MESSAGE value="something" />
-    <option name="LAST_COMMIT_MESSAGE" value="something" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="pog" />
+    <MESSAGE value="x" />
+    <MESSAGE value="added hi" />
+    <MESSAGE value="test" />
+    <MESSAGE value="isTileTaken" />
+    <MESSAGE value="Word __init__&#10;multPrint&#10;wordsObj" />
+    <MESSAGE value="Comments" />
+    <MESSAGE value="da" />
+    <option name="LAST_COMMIT_MESSAGE" value="da" />
   </component>
 </project>
