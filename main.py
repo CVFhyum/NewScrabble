@@ -4,7 +4,11 @@ from time import sleep as s
 
 # 'word' is a string.
 # 'idx' is a list containing two values (8a -> [8,1]) and usually refers to the index of the first letter in the word.
-# 'direc' is a character, h(orizontal) or v(ertical).
+# 'direc' is a character:
+    # 'h' (horizontal)
+    # 'v' (vertical)
+    # 'n' (none) when an invalid index is entered
+
 
 class Board:
 
@@ -104,14 +108,14 @@ class Board:
 class Word:
     def __init__(self, word, idx, direc):
         self.word = word.upper()
-        self.idx = []
+        self.idxs = [] # 2D list of the word's indices.
         self.direc = direc
         if direc == 'h':
             for i in range(len(word)):
-                self.idx.append([idx[0],idx[1]+i])
+                self.idxs.append([idx[0],idx[1]+i])
         if direc == 'v':
             for i in range(len(word)):
-                self.idx.append([idx[0]+i,idx[1]])
+                self.idxs.append([idx[0]+i,idx[1]])
 
         wordsObj[self.word] = self
 
@@ -133,6 +137,12 @@ class Player:
         return f"""{cl(f"Player {self.number} - {cl(self.name,attrs=['bold','underline'])}",self.colour)}\n""" \
                f"Your letters are: {', '.join([letterPointSub[x] for x in self.letters])}"
 
+    # Resets all of the player's variables after their turn ends
+    def resetVars(self):
+        self.curword = ""
+        self.curidx = []
+        self.curdirec = ''
+
     # Refills the player's letters back up to 7
     def refillLetters(self):
         for i in range(0, 7-len(self.letters)):
@@ -148,7 +158,7 @@ class Player:
         def LettersCheck():
             curwordL = [char for char in self.curword]
             letterscopy = self.letters.copy()
-            for i in curwordL:
+            for i in [ch for ch in self.curword]:
                 if i in letterscopy:
                     curwordL.remove(i)
                     letterscopy.remove(i)
@@ -166,12 +176,23 @@ class Player:
 
         return LettersCheck() and DictCheck()
 
-    # Automatically changes player's 'curdirec' if their word can only be played
-    def autoHorV(self):
+    # Checks if the index is invalid. Make sure that autoDirec is ran before this.
+    def canPlayIndex(self):
+        if self.curdirec == 'n':
+            return False
+
+
+
+    # Automatically changes player's 'curdirec' if their word can only be played in one direction.
+    def autoDirec(self):
         if self.curidx[0] + len(self.curword) > 15:
-            return False
-        if self.curidx[1] + len(self.curword) > 15:
-            return False
+            self.curdirec = 'h'
+        elif self.curidx[1] + len(self.curword) > 15:
+            self.curdirec = 'v'
+        elif self.curidx[0] + len(self.curword) > 15 and self.curidx[1] + len(self.curword) > 15:
+            self.curdirec = 'n'
+        else:
+            self.curdirec = ''
 
 
 
@@ -426,8 +447,19 @@ def idxConverter(stridx):
 p1 = Player("Yuval", "1", "red")
 board = Board()
 print(board)
+p1.refillLetters()
+print(p1)
+print(checkWords(p1.letters))
+while not p1.canPlayWord():
+    if p1.curword != "":
+        print("Invalid word!")
+    p1.curword = input("Word: ").upper()
+p1.curidx = idxConverter(input("Index (num/let): "))
 
-print(idxConverter(input()))
+if p1.curdirec == '':
+    p1.curdirec = input("Input (h/v): ")
+board.placeWord(p1.curword, p1.curidx, p1.curdirec)
+print(board)
 
 
 
@@ -442,7 +474,7 @@ print(idxConverter(input()))
 #           board.words,
 #           board.words[1].idx,
 #           wordsObj)
-
+#
 # while True:
 #     p1.refillLetters()
 #     print(p1)
@@ -450,7 +482,6 @@ print(idxConverter(input()))
 #     p1.curword = input("Word: ").upper()
 #     print(p1.curword)
 #     print(p1.canPlayWord())
-
 
 
 
